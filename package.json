@@ -1,7 +1,14 @@
 {
     "name": "snail-components",
-    "version": "1.0.0",
+    "private": false,
+    "version": "1.0.3",
     "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guo764672608/snail-components"
+    },
+    "license": "Apache-2.0",
+    "homepage": "",
     "main": "./dist/index.es.js",
     "types": "./dist/index.d.ts",
     "exports": {
@@ -14,15 +21,20 @@
         }
     },
     "files": [
-        "dist"
+        "dist",
+        "lib",
+        "es"
     ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
     "scripts": {
         "dev": "vite serve docs",
         "build-docs": "rimraf docs/dist && vite build docs && serve -s docs/dist",
         "lint": "eslint .",
         "preview": "vite preview",
         "ssr-docs": "rimraf docs/dist && vite-pages ssr docs && serve docs/dist",
-        "build": "tsc -b && vite build"
+        "build": "tsc -p tsconfig.build.json && vite build"
     },
     "dependencies": {
         "antd": "^5.22.7",

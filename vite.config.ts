@@ -6,11 +6,13 @@ import dts from 'vite-plugin-dts'
 // https://vite.dev/config/
 export default defineConfig({
   build: {
+    outDir: 'dist', // 自定义构建输出目录
+    target: 'es2020',
     lib: {
-      entry: resolve(__dirname, './lib/index.ts'),
-      name: 'snail-components',
-      formats: ['es'],
-      fileName: format => `index.${format}.js`
+      entry: resolve(__dirname, 'src/index.tsx'),
+      // name: 'snail-components',
+      formats: ['cjs', 'es'],
+      // fileName: format => `index.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -27,7 +29,7 @@ export default defineConfig({
     react(),
     dts({
       rollupTypes: true,
-      include: ['./lib'],
+      include: ['./src'],
       tsconfigPath: './tsconfig.app.json'
     })
   ]
