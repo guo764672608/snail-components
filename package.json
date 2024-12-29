@@ -1,0 +1,65 @@
+{
+    "name": "snail-components",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./dist/index.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./dist/style.css": {
+            "import": "./dist/style.css"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite serve docs",
+        "build-docs": "rimraf docs/dist && vite build docs && serve -s docs/dist",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "ssr-docs": "rimraf docs/dist && vite-pages ssr docs && serve docs/dist",
+        "build": "tsc -b && vite build"
+    },
+    "dependencies": {
+        "antd": "^5.22.7",
+        "classnames": "^2.5.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-draggable": "^4.4.6",
+        "react-router-dom": "^7.1.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@mdx-js/react": "^3.1.0",
+        "@types/node": "^22.10.2",
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "@vitejs/plugin-react-swc": "^3.5.0",
+        "autoprefixer": "^10.4.20",
+        "eslint": "^9.17.0",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "eslint-plugin-react-refresh": "^0.4.16",
+        "globals": "^15.14.0",
+        "postcss": "^8.4.49",
+        "rimraf": "^5.0.5",
+        "serve": "^14.2.1",
+        "tailwindcss": "^3.4.17",
+        "typescript": "~5.6.2",
+        "typescript-eslint": "^8.18.2",
+        "vite": "^5.0.0",
+        "vite-pages-theme-doc": "^5.0.0",
+        "vite-plugin-doc": "^1.0.9",
+        "vite-plugin-dts": "^4.4.0",
+        "vite-plugin-react-pages": "^5.0.0"
+    },
+    "peerDependencies": {
+        "antd": "^5.22.7",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-draggable": "^4.4.6"
+    }
+}

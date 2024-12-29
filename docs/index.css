@@ -1,0 +1,8 @@
+@import '../style.css';
+.vp-local-demo {
+    padding: 0 !important;
+}
+
+.vp-local-layout .vp-local-body .vp-local-content img {
+    max-width: 100% !important;
+}
