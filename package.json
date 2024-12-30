@@ -1,7 +1,7 @@
 {
     "name": "snail-components",
     "private": false,
-    "version": "1.0.3",
+    "version": "1.0.5",
     "type": "module",
     "repository": {
         "type": "git",
@@ -9,17 +9,9 @@
     },
     "license": "Apache-2.0",
     "homepage": "",
-    "main": "./dist/index.es.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/index.es.js",
-            "types": "./dist/index.d.ts"
-        },
-        "./dist/style.css": {
-            "import": "./dist/style.css"
-        }
-    },
+    "main": "./dist/index.cjs.js",
+    "module": "./dist/index.es.js",
+    "types": "./lib/index.d.ts",
     "files": [
         "dist",
         "lib",
